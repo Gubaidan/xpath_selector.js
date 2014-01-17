@@ -1,4 +1,6 @@
 javascript:(function() {
+    var disabled = false;
+
     var newcss = ".mouseOn{background-color: #bcd5eb !important;outline: 2px solid #5166bb !important;}";
     if ('\v'=='v') /* ie only */ {
         document.createStyleSheet().cssText = newcss;
@@ -12,7 +14,8 @@ javascript:(function() {
       function(e){
           var elem = e.target || e.srcElement;
           if (prevElement!= null) {prevElement.classList.remove("mouseOn");}
-          elem.classList.add("mouseOn");
+          if( !disabled )
+            elem.classList.add("mouseOn");
           prevElement = elem;
       },true);
 
@@ -34,4 +37,11 @@ javascript:(function() {
       }
       console.log(pathElements.join("/") + "[" + index + "]");
     });
-})();
+
+    document.onkeydown = function(evt) {
+      if(evt.keyCode == 27) {
+        this.disabled = true;
+      }
+    }
+
+C})();
