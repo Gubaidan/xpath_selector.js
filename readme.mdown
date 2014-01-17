@@ -1,0 +1,12 @@
+Xpath Selector
+--------------
+
+This doesn't work yt
+
+
+## To use
+
+In the future to use, add this as a bookmarklet and presto
+
+  javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://raw2.github.com/markgandolfo/xpath_selector.js/master/element_selector.js';})();
+
