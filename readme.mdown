@@ -1,12 +1,17 @@
 Xpath Selector
 --------------
 
-This doesn't work yt
-
+console.logs the xpath of a clicked element..
+This is the first step to clone kimono :)
 
 ## To use
 
-In the future to use, add this as a bookmarklet and presto
+Add this as a bookmarklet and presto
 
     javascript:(function(){document.body.appendChild(document.createElement('script')).src='//rawgithub.com/markgandolfo/xpath_selector.js/master/element_selector.js';})();
+
+## Future
+
+I might add css selectors as well.
+
 
