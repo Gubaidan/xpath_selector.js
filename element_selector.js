@@ -40,8 +40,8 @@ javascript:(function() {
 
     document.onkeydown = function(evt) {
       if(evt.keyCode == 27) {
-        this.disabled = true;
+        disabled = true;
       }
     }
 
-C})();
+})();
