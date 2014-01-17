@@ -19,7 +19,6 @@ javascript:(function() {
   document.addEventListener('click',
     function(e){
       var pathElements = [];
-      var elem = e.currentTarget;
       var index = 0;
       var siblings = e.currentTarget.parentNode.getElementsByTagName(e.currentTarget.tagName);
       for (var i=0, imax=siblings.length; i<imax; i++) {
