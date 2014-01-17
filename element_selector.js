@@ -20,7 +20,8 @@ javascript:(function() {
     function(e){
       var pathElements = [];
       var index = 0;
-      var siblings = e.currentTarget.parentNode.getElementsByTagName(e.currentTarget.tagName);
+      var elem = e.target || e.srcElement;
+      var siblings = elem.parentNode.getElementsByTagName(elem.tagName);
       for (var i=0, imax=siblings.length; i<imax; i++) {
         if (e.currentTarget === siblings[i]) {
           index = i+1; // add 1 for xpath 1-based
