@@ -8,5 +8,5 @@ This doesn't work yt
 
 In the future to use, add this as a bookmarklet and presto
 
-  javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://raw2.github.com/markgandolfo/xpath_selector.js/master/element_selector.js';})();
+  javascript:(function(){document.body.appendChild(document.createElement('script')).src='//rawgithub.com/markgandolfo/xpath_selector.js/master/element_selector.js';})();
 

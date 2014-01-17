@@ -1,11 +1,10 @@
 javascript:(function() {
-
     var newcss = ".mouseOn{background-color: #bcd5eb !important;outline: 2px solid #5166bb !important;}";
     if ('\v'=='v') /* ie only */ {
         document.createStyleSheet().cssText = newcss;
     } else {
-        var tag = document.createElement('style'); tag.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(tag); 
-        tag[ (typeof document.body.style.WebkitAppearance=='string') /* webkit only */ ? 'innerText' : 'innerHTML'] = newcss;    
+        var tag = document.createElement('style'); tag.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(tag);
+        tag[ (typeof document.body.style.WebkitAppearance=='string') /* webkit only */ ? 'innerText' : 'innerHTML'] = newcss;
     }
 
   prevElement = null;
@@ -16,15 +15,15 @@ javascript:(function() {
           elem.classList.add("mouseOn");
           prevElement = elem;
       },true);
-  
-  document.addEventListener('click', 
+
+  document.addEventListener('click',
     function(e){
       var pathElements = [];
       var elem = e.currentTarget;
       var index = 0;
       var siblings = e.currentTarget.parentNode.getElementsByTagName(e.currentTarget.tagName);
       for (var i=0, imax=siblings.length; i<imax; i++) {
-        if (e.currentTarget === siblings[i] {
+        if (e.currentTarget === siblings[i]) {
           index = i+1; // add 1 for xpath 1-based
         }
       }
