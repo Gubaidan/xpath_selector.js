@@ -21,22 +21,24 @@ javascript:(function() {
 
   document.addEventListener('click',
     function(e){
-      var pathElements = [];
-      var index = 0;
-      var elem = e.target || e.srcElement;
-      var siblings = elem.parentNode.getElementsByTagName(elem.tagName);
-      for (var i=0, imax=siblings.length; i<imax; i++) {
-        if (e.currentTarget === siblings[i]) {
-          index = i+1; // add 1 for xpath 1-based
+      if(!disabled) {
+        var pathElements = [];
+        var index = 0;
+        var elem = e.target || e.srcElement;
+        var siblings = elem.parentNode.getElementsByTagName(elem.tagName);
+        for (var i=0, imax=siblings.length; i<imax; i++) {
+          if (e.currentTarget === siblings[i]) {
+            index = i+1; // add 1 for xpath 1-based
+          }
         }
-      }
 
-      while (elem.tagName.toLowerCase() != "html") {
-        pathElements.unshift(elem.tagName);
-        elem = elem.parentNode;
-      }
-      console.log(pathElements.join("/") + "[" + index + "]");
-    });
+        while (elem.tagName.toLowerCase() != "html") {
+          pathElements.unshift(elem.tagName);
+          elem = elem.parentNode;
+        }
+        console.log(pathElements.join("/") + "[" + index + "]");
+      });
+    }
 
     document.onkeydown = function(evt) {
       if(evt.keyCode == 27) {
