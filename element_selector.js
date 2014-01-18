@@ -37,8 +37,8 @@ javascript:(function() {
           elem = elem.parentNode;
         }
         console.log(pathElements.join("/") + "[" + index + "]");
-      });
-    }
+      }
+    });
 
     document.onkeydown = function(evt) {
       if(evt.keyCode == 27) {
